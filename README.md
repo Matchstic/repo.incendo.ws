@@ -1,5 +1,9 @@
 # repo.incendo.ws
-Public archive of Cydia repository located at https://repo.incendo.ws.
+Public archive of Cydia repositories located at:
+
+- https://repo.incendo.ws
+- https://convergance.incendo.ws
+- https://xenpublic.incendo.ws
 
 `.deb` files for packages are available for download here. This is likely only going to be useful for older devices (prior to iOS 15).
 
