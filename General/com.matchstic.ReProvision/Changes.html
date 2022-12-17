@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Changes</title>
+        <meta name="keywords" content="iOS,cydia,application,app">
+        <link href="http://repo.incendo.ws/css/ios7.min.css" rel="stylesheet" type="text/css" />
+        <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-42470072-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-42470072-1');
+        </script>
+          
+        <!-- AdSense -->
+        <script data-ad-client="ca-pub-7724056548111818" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        
+    </head>
+    
+    <body style="margin-top:40px;">
+        <article>
+        <section class="content">
+            
+            <h2>Advertisement</h2>
+            <ul>
+                <li class="ad">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="fluid"
+                         data-ad-layout-key="-fr+5t+55-ch+3k"
+                         data-ad-client="ca-pub-7724056548111818"
+                         data-ad-slot="5649838779"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                  </li>
+            </ul>
+            
+            <h2>0.5.2~EOL</h2>
+              <ul>
+                  <li>
+                    <p>Added deprecation notice</p>
+                  </li>
+              </ul>
+            
+            <h2>0.5~release</h2>
+              <ul>
+                  <li>
+                    <p>Fallback to using AuthKit login for iOS 9 users</p>
+                  </li>
+                <li>
+                  <p>Implemented 2FA workaround, which redirects to iOS Settings to request and input a code</p>
+                </li>
+                <li>
+                  <p>Switched to a share extension for iOS 13 support of 'open IPA from Safari'</p>
+                </li>
+                <li>
+                  <p>Fixed remaining Dark Mode issues on iOS 13</p>
+                </li>
+              </ul>
+            
+            <h2>0.5~experimental8</h2>
+              <ul>
+                  <li>
+                    <p>Properly handle Apple IDs that use capital letters</p>
+                  </li>
+                <li>
+                  <p>Allow legacy Apple IDs that are not email addresses to be used</p>
+                </li>
+              </ul>
+            
+            <h2>0.5~experimental7</h2>
+              <ul>
+                  <li>
+                    <p>Further fixes to the login process</p>
+                  </li>
+                <li>
+                  <p>[iOS 13] Improvements to Dark Mode handling</p>
+                </li>
+              </ul>
+            
+            <h2>0.5~experimental6</h2>
+              <ul>
+                <li>
+                  <p>[iOS 13] Fixed crash on launch for iPad</p>
+                </li>
+              </ul>
+            
+            <h2>0.5~experimental5</h2>
+              <ul>
+                <li>
+                  <p>Fix further signing issues</p>
+                  <p>Thanks to: @rileytestut and @kabiroberai</p>
+                </li>
+                <li>
+                  <p>[iOS 13] Fixed background signing being non-functional</p>
+                </li>
+              </ul>
+            
+            <h2>0.5~experimental4</h2>
+              <ul>
+                <li>
+                  <p>Fix crash during login for iOS 9 devices</p>
+                  <p>- 2FA code is not currently supported</p>
+                </li>
+              </ul>
+            
+            <h2>0.5~experimental3</h2>
+              <ul>
+                <li>
+                  <p>Updated fix for the "Update to Xcode 7.3" issue:</p>
+                  <p>- Removed the need for a seperate popup asking for username and password</p>
+                  <p>- Fixed checks for wrong credentials - 2FA code is not currently supported</p>
+                </li>
+                <li>
+                  <p>Hopefully fix iOS 9 to 11 crash when trying to login</p>
+                </li>
+              </ul>
+            
+            <h2>0.5~experimental1</h2>
+              <ul>
+                <li>
+                  <p>Temporary fix for the "Update to Xcode 7.3" issue</p>
+                  <p>Solution kindly provided by: TrungNguyen1909</p>
+                  <p>Thanks also to @rileytestut and @kabiroberai</p>
+                </li>
+              </ul>
+            
+            <h2>0.4.5</h2>
+              <ul>
+                <li>
+                  <p>Improve reliability with daemon communication layer implementation</p>
+                  <p>This should better handle the case of the daemon not running</p>
+                </li>
+              </ul>
+            
+            <h2>0.4.4</h2>
+              <ul>
+                <li>
+                  <p>Fixed crash on launch for users with UTF-8 characters in their Apple ID name</p>
+                </li>
+                <li>
+                  <p>Added checks to ensure network connectivity works as expected on Chinese devices</p>
+                </li>
+                <li>
+                  <p>Improved check for the requirement of app-specific passwords</p>
+                </li>
+                <li>
+                  <p>Use CFBundleDisplayName when installing an IPA</p>
+                </li>
+              </ul>
+            
+            <h2>0.4.3</h2>
+              <ul>
+                <li>
+                  <p>Revised application to daemon communication layer implementation</p>
+                  <p>This is now more stable, and should ensure iOS doesn't show ReProvision as running in background for hours (which it isn't!)</p>
+                </li>
+              </ul>
+            
+            <h2>0.4.2</h2>
+              <ul>
+                <li>
+                  <p>Various small bug fixes</p>
+                </li>
+                <li>
+                  <p>Added proper cleanup of IPA files from external applications</p>
+                </li>
+              </ul>
+            
+            <h2>0.4.1</h2>
+              <ul>
+                <li>
+                  <p>Fix an issue with the Data Protection capability, such as when using the "Add" functionailty</p>
+                </li>
+              </ul>
+            
+            <h2>0.4</h2>
+              <ul>
+                <li>
+                  <p>Fix codesigning on iOS 12</p>
+                </li>
+              </ul>
+            
+        <h2>0.3.3</h2>
+          <ul>
+            <li>
+              <p>Fix background automatic signing failing to work in some cases.</p>
+            </li>
+            <li>
+                <p>Another experimental fix for the LaunchServicesError code 0 issue seen by some iOS 9 users.</p>
+            </li>
+          </ul>
+            
+        <h2>0.3.2</h2>
+          <ul>
+            <li>
+              <p>Fix some paid developer accounts being required to delete certificates on login.</p>
+            </li>
+            <li>
+                <p>Remove "Add" button in app list, and give a warning when tapping it in the popup for an application.</p>
+            </li>
+            <li>
+                <p>Added experimental fix for the LaunchServicesError code 0 issue seen by some iOS 9 users.</p>
+            </li>
+            <li>
+                <p>Added troubleshooting entry if background signing isn't working</p>
+            </li>
+          </ul>
+            
+          <h2>0.3.1</h2>
+          <ul>
+            <li>
+              <p>Removed the <code>unboundedTaskCompletion</code> background mode.</p>
+              <p>(This should help with battery usage in some cases)</p>
+            </li>
+            <li>
+                <p>'No applications need resigning' is now a non-urgent alert, and so won't be annoying now.</p>
+            </li>
+          </ul>
+        
+          <h2>0.3</h2>
+          <ul>
+            <li>
+              <p>First public release</p>
+            </li>
+          </ul>
+          
+          <h2>Advertisement</h2>
+          <ul>
+              <li class="ad">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-format="fluid"
+                         data-ad-layout-key="-fr+5t+55-ch+3k"
+                         data-ad-client="ca-pub-7724056548111818"
+                         data-ad-slot="5649838779"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </li>
+          </ul>
+        
+        </section>
+        </article>
+    </body>
+</html>

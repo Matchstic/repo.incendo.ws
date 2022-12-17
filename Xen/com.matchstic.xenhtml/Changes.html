@@ -1,0 +1,771 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Changelog</title>
+        <link href="http://repo.incendo.ws/css/ios7.min.css" rel="stylesheet" type="text/css" />
+        <meta name="keywords" content="iOS,cydia,application,app">
+        <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-42470072-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-42470072-1');
+        </script>
+          
+        <!-- AdSense -->
+        <script data-ad-client="ca-pub-7724056548111818" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        
+    </head>
+    
+    <body style="margin-top:40px;">
+        <article>
+        <section class="content">
+            
+        <h2>Advertisement</h2>
+        <ul>
+          <li class="ad">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-format="fluid"
+                     data-ad-layout-key="-fr+5t+55-ch+3k"
+                     data-ad-client="ca-pub-7724056548111818"
+                     data-ad-slot="5649838779"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </li>
+         </ul>
+         
+         <h2>2.0~beta9</h2>
+         <ul>
+             <li>
+                 <p>[iOS 14 + unc0ver] Fixed issue where it was possible the device would freeze after a userspace reboot in certain configurations</p>
+                 <p>This problem would occur when other tweaks accidentally loaded into processes they shouldn't, whilst widgets were trying to start up</p>
+             </li>
+             <li>
+                 <p>[iOS 13 - 14.4] Fixed issue where Homescreen widgets could disappear when changing the wallpaper</p>
+             </li>
+             <li>
+                 <p>[iOS 10 - 14.4] The 'Restore widget settings?' dialog is now much less annoying, and won't prompt you every time you go to edit an existing widget's setup</p>
+             </li>
+             <li>
+                 <p>[iOS 10 - 14.4] AirPods, Apple Watch etc are now returned from the Bluetooth portion of the new Communications API</p>
+             </li>
+             <li>
+                 <p>[iOS 10 - 14.4] Low Power Mode will now correctly update in widgets</p>
+             </li>
+             <li>
+                 <p>Updated translations for:</p>
+                 <br />
+                 <p>• Arabic (slfar01)</p>
+                 <p>• German (Rasputin007)</p>
+                 <p>• Spanish (Kristatos)</p>
+                 <p>• French (Tito12)</p>
+                 <p>• Hebrew (Tito12)</p>
+                 <p>• Dutch (PeterPan)</p>
+                 <p>• Turkish (serif61)</p>
+                 <br />
+                 <p>More translations are still needed! Please go <a href="https://github.com/Matchstic/Xen-HTML/issues/331">here for more information</a>
+             </li>
+         </ul>
+         
+         <h2>2.0~beta8</h2>
+         <ul>
+             <li>
+                 <p>[iOS 10 - 14.4] Added a modern way for widget developers to present settings to users</p>
+                 <p>This is done via a new file, <code>config.json</code>. See documentation below for more details
+             </li>
+             <li>
+                 <p>[iOS 10 - 14.4] Removed internal dependency on libpackageinfo</p>
+                 <p>This was done due to the amount of crashes it was causing; if you've ever tried to open the UI to select a widget, and it crashed, this was the cause.</p>
+                 <p>Unfortunately, this does lose the ability to automatically pick up author names on widgets. Widget developers are encouraged to use the new <code>config.json</code> which includes a way to make this work again.</p>
+             </li>
+             <li>
+                 <p>[iOS 10 - 14.4] Added widget settings restoration</p>
+                 <p>For widgets that use the new <code>config.json</code>, this features ensures Xen HTML 'remembers' the settings from the last time you used a widget, and offers to restore that configuration</p>
+             </li>
+             <li>
+                 <p>[iOS 14.0 - 14.4] Fixed issue where widgets would "pop in" after a delay when closing an app</p>
+             </li>
+             <li>
+                 <p>[iOS 14.0 - 14.4] Fixed issue where icons couldn't be dropped onto the dock during icon edit mode</p>
+             </li>
+             <li>
+                 <p>[iOS 9.0 - 14.4] Ensured widget editing buttons ('X' and 'Settings') avoid the edges of the screen so they're always accessible</p>
+             </li>
+             <li>
+                 <p>See the <a href="https://incendo.ws/documentation/widget-api/additional-documentation/widget-setup/configuration.html">Configuration documentation</a> for the new <code>config.json</code> changes in this release</p>
+             </li>
+         </ul>
+         
+         <h2>2.0~beta7.1</h2>
+         <ul>
+             <li>
+                 <p>Fix issue in the new default Reminders widget</p>
+             </li>
+         </ul>
+         
+         <h2>2.0~beta7</h2>
+         <ul>
+             <li>
+                 <p>[iOS 10 - 14.3] Added Calendar API</p>
+                 <p>Widgets can use this to query the Calendar app for events, and manage them</p>
+             </li>
+             <li>
+                 <p>[iOS 10 - 14.3] Added Reminders API</p>
+                 <p>Widgets can use this to query the Reminders app for reminders, and manage them</p>
+             </li>
+             <li>
+                 <p>[iOS 10 - 14.3] Added Communications API</p>
+                 <p>Widgets can use this to access information about communication hardware: WiFi, Cellular and Bluetooth</p>
+             </li>
+             <li>
+                 <p>[iOS 10 - 14.3] Finished backwards compatibility layer for XenInfo and InfoStats 2</p>
+                 <p>You are now able to completely remove either of these tweaks, and widgets will continue to work</p>
+             </li>
+             <li>
+                 <p>[iOS 10 - 14.3] Improved reliability of the Setup UI</p>
+                 <p>This was causing an issue where it appeared the device had "frozen" after installing Xen HTML for the first time</p>
+             </li>
+             <li>
+                 <p>[iOS 10 - 14.3] Fixed an issue where widget data didn't load correctly immediately after rebooting</p>
+                 <p>Typically, this was only affecting checkra1n users</p>
+             </li>
+             <li>
+                 <p>See the <a href="https://incendo.ws/documentation/widget-api/classes/Filesystem.html">Documentation</a> for the new APIs added in this release</p>
+             </li>
+         </ul>
+         
+         <h2>2.0~beta6</h2>
+         <ul>
+             <li>
+                 <p>[iOS 14.3] Weather data now works on this version</p>
+             </li>
+             <li>
+                 <p>[iOS 14] Added support for the new arm64e ABI</p>
+             </li> 
+             <li>
+                 <p>[iOS 10 - 14] Added new Filesystem API</p>
+                 <p>See the <a href="https://incendo.ws/documentation/widget-api/classes/Filesystem.html">Documentation</a> for more details</p>
+             </li>
+         </ul>
+         
+         <h2>2.0~beta5</h2>
+         <ul>
+             <li>
+               <p>Added support for iOS 14</p>
+               <p>This would not have been possible without the testing team behind Xen HTML; thank you all!</p>
+             </li>
+             <li>
+                 <p>[iOS 14] Adding widgets directly to the Homescreen now is done via Apple's "+" button when editing icons</p>
+             </li> 
+             <li>
+                 <p>[iOS 14] Completely disabled XenInfo</p>
+                 <p><b>You should not install XenInfo on iOS 14</b></p>
+             </li>
+             <li>
+                 <p>[iOS 9 - 14] Fixed an issue where widgets could 'disappear' on iPad when rotating</p>
+             </li>
+         </ul>
+         
+         <h2>2.0~beta4</h2>
+         <ul>
+             <li>
+               <p>[iOS 10 - 13.5] Improve the stability of <code>widgetinfod</code></p>
+             </li>
+         </ul>
+         
+         <h2>2.0~beta3.2</h2>
+         <ul>
+             <li>
+               <p>[iOS 9 - 13.5] Fixed an issue where translated content did not fallback correctly</p>
+             </li>
+         </ul>
+         
+         <h2>2.0~beta3.1</h2>
+         <ul>
+             <li>
+               <p>[iOS 9 - 13.5] Reverted fix for "widgets could scroll horizontally when double tapping their edge"</p>
+             </li>
+         </ul>
+         
+         <h2>2.0~beta3</h2>
+         <ul>
+             <li>
+               <p>[iOS 10 - 13.5] Rebuilt the IPC layer between widgets and <code>widgetinfod</code></p>
+               <p>This greatly improves system stability, such as unexpected freezes or missing widget data</p>
+             </li>
+             <li>
+               <p>[iOS 10 - 13.5] Addressed some potential battery issues in <code>widgetinfod</code></p>
+             </li>
+             <li>
+               <p>[iOS 9 - 13.5] Fixed an issue in Settings where widget previews were not unloaded correctly, leading to excess memory usage</p>
+             </li>
+             <li>
+               <p>[iOS 9 - 13.5] Added toggle for changing how the built-in battery management system should work</p>
+               <p>Option is available in Settings > Xen HTML > Advanced</p>
+             </li>
+             <li>
+               <p>[iOS 10 - 13.5] Fixed issue preventing Snowboard from themeing Today View widgets</p>
+             </li>
+             <li>
+               <p>[iOS 9 - 13.5] Developer Options are now moved to the Advanced section</p>
+             </li>
+             <li>
+               <p>[iOS 9 - 13.5] Fixed an issue where widgets could scroll horizontally when double tapping their edge</p>
+             </li>
+             <li>
+               <p>[iOS 9 - 13.5] Added an option to restore the default Lockscreen idle timeout</p>
+             </li>
+             <li>
+               <p>[iOS 13.0 - 13.5] Fixed an issue where widgets were not clipped to the edges of the screen</p>
+             </li>
+             <li>
+               <p>[iOS 10.0 - 13.5] The Weather narrative field in widgets should now be auto-translated</p>
+             </li>
+         </ul>
+         
+         <h2>2.0~beta2.1</h2>
+         <ul>
+             <li>
+               <p>[iOS 10 - 13.5] Fix an incompatibility with IconOmatic when loading app icons</p>
+             </li>
+         </ul>
+         
+         <h2>2.0~beta2</h2>
+         <ul>
+             <li>
+               <p>[iOS 10 - 13.5] Default widgets now support Dark Mode (thanks to tomaszpoliszuk)</p>
+             </li>
+             <li>
+               <p>[iOS 10 - 13.5] Added support for XenInfo actions: openurl, openapp</p>
+             </li>
+             <li>
+               <p>[iOS 10 - 13.5] Fixed issue where iframes would open their contents in Safari</p>
+             </li>
+             <li>
+               <p>[iOS 9 - 13.5] Fixed issue that prevented CarPlay icons from theming</p>
+             </li>
+             <li>
+               <p>[iOS 10 - 13.5] Added an Applications data provider to the API</p>
+             </li>
+             <li>
+               <p>[iOS 10 - 13.5] Added new default widget to demonstrate the Applications data provider</p>
+             </li>
+             <li>
+               <p>[iOS 10 - 13.5] Added some further safety checks to prevent widgetinfod from crashing</p>
+             </li>
+             <li>
+               <p>[iOS 10 - 13.5] Improved widget compatibility</p>
+             </li>
+         </ul>
+         
+         <h2>2.0~beta1</h2>
+         <ul>
+             <li>
+               <p>[iOS 10 - 13.5] Added integrated widget library</p>
+               <br />
+               <p>This allows widgets to take full advantage of system-level data and functionality, without any additional tweaks installed</p>
+               <p>You no longer need the following tweaks installed:</p>
+               <br />
+               <p>• XenInfo</p>
+               <p>• Widget Weather 3</p>
+               <p>• InfoStats 2</p>
+               <p>• myLocation</p>
+               <br />
+               <p>This feature is currently <b>in progress</b>; it can run the majority of widgets currently available.</p>
+               <p>See the <a href="https://incendo.ws/documentation/widget-api/">Documentation</a> for more details</p>
+               <br />
+               <p>This is NOT available on iOS 9, due to missing JavaScript features</p>
+               <br />
+               <p>Note: there are a small number of reports that widget data is missing after installation</p>
+               <p>If this happens to you, try running <code>ldrestart</code>, or rebooting</p>
+             </li>
+             <li>
+               <p>[iOS 10 - 13.5] Added seven (7) new default widgets, that showcase usage of the new widget library</p>
+             </li>
+             <li>
+               <p>[iOS 9 - 13.5] Added various stability improvements:</p>
+               <br />
+               <p>• SpringBoard's memory limit is now raised to avoid random resprings</p>
+               <p>• Other tweaks are prevented from injecting into WebKit XPC services, unless they explicitly set that they need to</p>
+             </li>
+             <li>
+               <p>[iOS 13.4 - 13.5] Added full support for these two iOS versions</p>
+             </li>
+             <li>
+                 <p><b>Please report any new issues <a href="https://github.com/Matchstic/Xen-HTML/issues">here</a></b></p>
+                 <p>Additionally, be on the lookout for <code>widgetinfod</code> crashes</p>
+             </li>
+         </ul>
+         
+         <h2>1.1~beta5</h2>
+         <ul>
+             <li>
+               <p>[iOS 13.3] Fix Lockscreen widgets not showing up</p>
+             </li>
+             <li>
+               <p>[iOS 13] Tweaked internal handling of XenInfo updates when widgets are paused</p>
+             </li>
+         </ul>
+         
+         <h2>1.1~beta4</h2>
+         <ul>
+             <li>
+               <p>[iOS 13] Fix issue where apps would not open correctly after tapping notifications</p>
+             </li>
+         </ul>
+         
+         <h2>1.1~beta3</h2>
+         <ul>
+             <li>
+               <p>Forgot to disable logging to file</p>
+             </li>
+         </ul>
+         
+        <h2>1.1~beta2</h2>
+        <ul>
+            <li>
+              <p>[iOS 13] Removed support for Legacy Mode</p>
+              <p>This lead to crashing if used on iOS 13</p>
+            </li>
+        </ul>
+         
+        <h2>1.1~beta1</h2>
+        <ul>
+            <li>
+              <p>[iOS 13] Initial support for iOS 13</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 13.2] Fixed an issue preventing widgets showing in the Notification Centre when Persistent Mode was enabled</p>
+            </li>
+        </ul>
+            
+        <h2>1.0.1~beta1</h2>
+        <ul>
+            <li>
+              <p>[iOS 12.4] Experimental hotfixes for A12 users w/ unc0ver</p>
+              <p>Some issues are still expected, such as instability when applying widgets</p>
+            </li>
+        </ul>
+            
+        <h2>0.5.5-6</h2>
+        <ul>
+            <li>
+              <p>[iOS 9.0 - 12.4] hotfix for widgets disappearing unexpectedly</p>
+            </li>
+        </ul>
+            
+        <h2>0.5.5 (GM build)</h2>
+        <ul>
+            <li>
+              <p>[iOS 9.0 - 9.3] Fix potential crash on install</p>
+            </li>
+            <li>
+              <p>[iOS 10.0 - 12.2] Fix issue where widgets could be auto-detected to run in Legacy Mode incorrectly</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 12.2] Ensure that widgets respond properly to memory pressure events</p>
+              <p>This should result in better system stability</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 12.2] Fix some widgets added via 'Add Widget' not recieving touch events</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 12.2] Fix HTML input fields not being useable</p>
+            </li>
+        </ul>
+            
+        <h2>0.5.4</h2>
+        <ul>
+            <li>
+              <p>[iOS 12.0 - 12.2] Fix occasional crash when editing icons with Pagebar installed</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 (?) - 12.2] Fix 'Add Widget' placement with Harbor 2 installed</p>
+            </li>
+            <li>
+              <p>[iOS 12.0 - 12.2] Potential fix crash when using Cuboid to set icon positions</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 12.2] Fix issue with WebGL support that could cause icons and apps to show through the Lockscreen in Safe Mode</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 12.2] Fixed issue where widgets are sized and placed wrong on iPad, after respringing with the device in landscape mode</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 12.2] Add better support for iPad landscape in the Setup UI</p>
+            </li>
+        </ul>
+            
+        <h2>0.5.3</h2>
+        <ul>
+            <li>
+              <p>[iOS 9.0 - 12.1.2] Implemented new battery management</p>
+              <p>This involves pausing JavaScript execution of widgets</p>
+              <p>Please let me know if there's any issues with widgets rendering oddly</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 12.1.2] Added option for any widgets added with the new 'Add widget' button to show beneath icons</p>
+              <p>This emulates the old tweak PerPageHTML</p>
+              <p>See <code>Settings > Xen HTML > Homescreen > Foreground</code></p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 12.1.2] Updated translations for:</p>
+              <p>• German</p>
+              <p>• Turkish</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 12.1.2] Various small bugfixes</p>
+            </li>
+        </ul>
+            
+        <h2>0.5.2</h2>
+        <ul>
+            <li>
+              <p>[iOS 12.0 - 12.1.2] Fix missing settings for the Lockscreen on the iPhone XR, XS and XS Max</p>
+            </li>
+        </ul>
+            
+        <h2>0.5.1</h2>
+        <ul>
+            <li>
+              <p>[iOS 12.0 - 12.1.2] Added arm64e slice (A12 device support)</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 12.1.2] Removed dependencies on libpackageinfo and libGitHubIssues</p>
+            </li>
+        </ul>
+            
+        <h2>0.5-1 and 0.5-2</h2>
+        <ul>
+            <li>
+              <p>[iOS 10.3 - 10.3.3] Hotfix for a crash from last update (why is 10.3 such a pain?)</p>
+            </li>
+        </ul>
+            
+        <h2>0.5</h2>
+        <ul>
+            <li>
+              <p>[iOS 9.0 - 12.1.2] Added support for widgets to be individually placed on any Homescreen page</p>
+              <p>This is similar to how the iWidgets tweak functioned</p>
+              <br />
+              <p><i>Enter the application icon 'wiggle' mode to add widgets</i></p>
+            </li>
+            <li>
+              <p>[iOS 11.0 - 12.1.2] Fixed issue where long-pressing an image in a widget would cause a white area to appear</p>
+            </li>
+            <li>
+              <p>[iOS 11.0 - 12.1.2] Fixed issue where the zoom magnifier glass could appear</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 12.1.2] Tweaked the Setup UI so that it doesn't cause some users to believe the device was just updated/restored</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 12.1.2] Added translations for:</p>
+              <p>• Turkish</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 12.1.2] Various other small bug fixes</p>
+            </li>
+        </ul>
+            
+        <h2>0.4rc8</h2>
+        <ul>
+            <li>
+              <p>[iOS 9.0 - 12.1.2] Added proper support for WebGL on the Lockscreen</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 12.1.2] Added two default widgets</p>
+            </li>
+            <li>
+              <p>[iOS 12.0 - 12.1.2] Fixed a state management issue with widget hiding for notifications</p>
+            </li>
+            <li>
+              <p>[iOS 11.2 - 12.1.2] Fixed issue where the Lockscreen dim timer duration was not working</p>
+            </li>
+            <li>
+              <p>[iOS 11.0 - 12.1.2] Fixed issue where the stock Lockscreen clock was prevented from scrolling with notifications</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 12.1.2] Various other small bug fixes</p>
+            </li>
+        </ul>
+            
+        <h2>0.4rc7-1</h2>
+        <ul>
+            <li>
+              <p>[iOS 9.0 - 11.3.1] Fixed respring loop</p>
+            </li>
+        </ul>
+            
+        <h2>0.4rc7</h2>
+        <ul>
+            <li>
+              <p>[iOS 9.0 - 11.3.1] Improvements to the time before widgets first render after locking the device</p>
+            </li>
+            <li>
+              <p>[iOS 11] Prevented widgets from being duplicated unexpectedly</p>
+            </li>
+            <li>
+              <p>[iOS 10] Fix for crash after unlocking the device with Touch ID.</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 11.3.1] Various small bug fixes.</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 11.3.1] Added translations for:</p>
+              <p>• Arabic</p>
+              <p>• Russian</p>
+              <p>• Portuguese</p>
+            </li>
+          </ul>
+            
+        <h2>0.4rc6</h2>
+        <ul>
+            <li>
+              <p>[iOS 9.0 - 11.3.1] Significant improvements to general stability and performance.</p>
+              <p>More work is needed - it is still possible for the Lockscreen to stall when waking the device for a few seconds.</p>
+            </li>
+            <li>
+              <p>[iOS 11.2 - 11.3.1] Added full support.</p>
+            </li>
+            <li>
+              <p>[iOS 10.3.3] Potential fix for a crash after installation.</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 11.3.1] Added translations for:</p>
+              <p>• Dutch</p>
+              <p>• French</p>
+              <p>• German</p>
+              <p>• Hewbrew</p>
+              <p>• Indonesian</p>
+              <p>• Italian</p>
+              <p>• Malay</p>
+              <p>• Spanish</p>
+              <p>• Chinese (Traditional)</p>
+              <p>• Greek</p>
+            </li>
+            <li>
+              <p>[iOS 9.0 - 11.3.1] Added Persistent Mode toggle to keep widgets in RAM.</p>
+              <p>This can be found in <code>Settings > Xen HTML > Lockscreen > Advanced</code>.</p>
+            </li>
+          </ul>
+        
+        <h2>0.4rc5-4</h2>
+        <ul>
+            <li>
+              <p>Fix to a Safe Mode crash occuring on first installation in the Setup UI.</p>
+            </li>
+          </ul>
+        
+        <h2>0.4rc5-1</h2>
+        <ul>
+            <li>
+              <p>Quick fix to a Safe Mode crash occuring on settings migration.</p>
+            </li>
+          </ul>
+        
+        <h2>0.4rc5</h2>
+        <ul>
+            <li>
+              <p>[iOS 9.0 - 11.1.2] Added support for multiple widgets on any layer:</p>
+              <p>• Lockscreen background</p>
+              <p>• Lockscreen foreground</p>
+              <p>• Homescreen background</p>
+            </li>
+            <li>
+              <p>Widget developers: Homescreen widgets now properly support scrolling regions!</p>
+            </li>
+            <li>
+              <p>Legacy Mode is now toggle-able per widget</p>
+            </li>
+            <li>
+              <p>Improved the speed of the Settings panel</p>
+            </li>
+            <li>
+              <p>Various small fixes and improvements</p>
+            </li>
+          </ul>
+        
+        <h2>0.4rc4</h2>
+        <ul>
+            <li>
+              <p>Added a workaround patch to ensure the Settings panel can still be utilised if dependencies are broken.</p>
+            </li>
+          </ul>
+        
+        <h2>0.4rc3</h2>
+        <ul>
+            <li>
+              <p>[iOS 11] Resolved freezing and lagging issues.</p>
+              <p>• Note that on rare occasions, the device may pause for a second when waking. This only occurs when Low Power Mode is enabled.</p>
+            </li>
+            <li>
+              <p>Ensured SBHTML widgets are displayed alphabetically (missed this section in RC2).</p>
+            </li>
+            <li>
+              <p>General stability improvements.</p>
+            </li>
+          </ul>
+        
+        <h2>0.4rc2</h2>
+        <ul>
+            <li>
+              <p>Fixed widgets using Options.plist not seeing any settings being applied other than the default.</p>
+            </li>
+            <li>
+              <p>Ensured widgets are displayed alphabetically regardless of capitalisation in the picker list.</p>
+            </li>
+          </ul>
+        
+        <h2>0.4rc1</h2>
+        <ul>
+            <li>
+              <p>[iOS 11] Updated all features</p>
+            </li>
+            <li>
+              <p>[iOS 11] Added specific settings for the iPhone X Lockscreen</p>
+            </li>
+            <li>
+              <p>[iOS 10] Updated first-time Setup interface</p>
+              <p>• You may need to re-apply your settings after updating.</p>
+            </li>
+            <li>
+              <p>Rebuilt all Settings panels from scratch</p>
+            </li>
+            <li>
+              <p>Added new settings for the Homescreen:</p>
+              <p>• Hide folder icon blur</p>
+              <p>• Hide icon labels</p>
+              <p>• Hide page indicators</p>
+            </li>
+          </ul>
+        
+        <h2>0.3.7</h2>
+        <ul>
+            <li>
+              <p>[iOS 10] Now defaults to using the old technique of hiding the clock</p>
+              <p>• The other technique hid the clock on *just* the Main page, which can still be optionally used in Settings</p>
+            </li>
+            <li>
+              <p>Improved scrolling performance of the new widget picker UI</p>
+            </li>
+          </ul>
+
+	<h2>0.3.6</h2>
+        <ul>
+            <li>
+              <p>[iOS 10] Updated all remaining features</p>
+            </li>
+            <li>
+              <p>[iOS 10] Fixed issue where the display may remain on after a notification arrives</p>
+            </li>
+            <li>
+              <p>[iOS 10] Ensured visual correctness for the Lockscreen background layer with blurred regions</p>
+            </li>
+            <li>
+              <p>[iOS 10] Moved to a new technique of hiding the clock</p>
+            </li>
+            <li>
+              <p>Added auto-detection of groovyAPI widgets</p>
+              <p>• Legacy Mode will now be automatically used for these widgets</p>
+            </li>
+            <li>
+              <p>Revised widget picker UI</p>
+              <p>• A Screenshot.png of any size can be placed in a widget's folder to display in the picker</p>
+            </li>
+            <li>
+              <p>Various crash fixes and minor bug fixes</p>
+            </li>
+          </ul>
+        
+        <h2>0.3.5</h2>
+        <ul>
+            <li>
+              <p>Basic iOS 10 support</p>
+              <p>• Fading the Lockscreen widget for notifications doesn't work yet.</p>
+              <p>• This may adversely affect iOS 10 users; please contatc me if that's the case!</p>
+            </li>
+            <li>
+              <p>Added a way to view known issues and to add new ones/suggest features</p>
+              <p>• This can be found in the Support section of Settings</p>
+            </li>
+          </ul>
+        
+        <h2>0.3.4</h2>
+        <ul>
+            <li>
+              <p>Resolved further touch issues related to the Homescreen layer, introduced last update.</p>
+            </li>
+          </ul>
+        
+        <h2>0.3.3</h2>
+        <ul>
+            <li>
+              <p>Resolved all touch issues related to the Homescreen layer.</p>
+            </li>
+            <li>
+              <p>Fixed issue where Lockscreen widgets remain hidden after a phone call ends.</p>
+            </li>
+            <li>
+              <p>Fixed issue relating to using the same widget on both the Lockscreen and Homescreen, and are moved to different locations on each.</p>
+            </li>
+            <li>
+              <p>Added tab in Settings to easily find new repositories with widgets to download.</p>
+              <br/>
+              <p>Developers, feel free to message me to add your repository to this section.</p>
+            </li>
+            <li>
+              <p>Added new widgetCanScroll option to WidgetInfo.plist, which specifies whether a widget can be scrolled vertically (like a webpage) when in use.</p>
+              <br/>
+              <p>More information on this can be found with the documentation for this tweak.</p>
+            </li>
+            <li>
+              <p>Fixed various minor issues</p>
+            </li>
+          </ul>
+        
+        <h2>0.3.2</h2>
+        <ul>
+            <li>
+              <p>Added proper handling of the Lockscreen media controls</p>
+            </li>
+            <li>
+              <p>Added proper handling of the Lockscreen notifications</p>
+            </li>
+            <li>
+              <p>Added option to use fullscreen Lockscreen notifications</p>
+            </li>
+            <li>
+              <p>Fixed potential Safe Mode crash that may occur if WebCycript (not required by Xen HTML) was not installed.</p>
+            </li>
+            <li>
+              <p>Fixed various minor issues</p>
+            </li>
+          </ul>
+        
+        <h2>0.3.1</h2>
+        <ul>
+            <li>
+              <p>Fixed issue which could cause the settings panel to crash, or the device to crash to Safe Mode</p>
+            </li>
+          </ul>
+        
+        <h2>0.3</h2>
+        <ul>
+            <li>
+              <p>Initial public beta release.</p>
+            </li>
+          </ul>
+
+        </section>
+        </article>
+    </body>
+</html>

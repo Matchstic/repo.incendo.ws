@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Changes</title>
+        <link href="http://repo.incendo.ws/css/ios7.min.css" rel="stylesheet" type="text/css" />
+        <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+    </head>
+    
+    <body style="margin-top:40px;">
+        <article>
+        <section class="content">
+        
+        <h2>0.3.4-2</h2>
+          <ul>
+            <li>
+              <p>Removed a previous "fix" that caused crashes on first open.</p>
+            </li>
+            <li>
+              <a href="https://github.com/Matchstic/Extender-Installer/issues" target="_blank" role="button">Remaining known issues</a>
+            </li>
+          </ul>
+        
+          <h2>0.3.4</h2>
+          <ul>
+            <li>
+              <p>Resolved issue where if an application is re-signed when still within the 7-day window, it would not gain a new expiry date.</p>
+            </li>
+            <li>
+              <p>Resolved issue where re-signs would continually re-occur until the 7-day window is passed.</p>
+            <li>
+              <p>Added automatic queuing of re-signs if the device is locked.</p>
+            </li>
+            <li>
+              <p>Added various safety checks on installation.</p>
+            </li>
+            <li>
+              <p>Added UI indicator in-app of a re-sign’s progress.</p>
+            </li>
+          </ul>
+        
+          <h2>0.3.3</h2>
+          <ul>
+            <li>
+              <p>Resolved the "Could not open file: " issue</p>
+            </li>
+            <li>
+              <p>Resolved issues with passwords containing symbols.</p>
+              <p>The following have been directly tested:</p>
+              <p>• +</p>
+              <p>• &</p>
+              <p>• @</p>
+              <p>• -</p>
+              <p>All other symbols should also working now.</p>
+            </li>
+            <li>
+              <p>Resolved issue causing Auto-Revoke Certificates to not function as expected.</p>
+            </li>
+            <li>
+              <p>Resolved issue causing Saurik's code to run twice for a given application when trying to re-sign it.</p>
+              <p>This hopefully should also resolve any issues when installation of an application is occuring.</p>
+            </li>
+          </ul>
+        
+        <h2>0.3.2</h2>
+          <ul>
+            <li>
+              <p>Fixed issue where installation may fail with an error about the Team ID.</p>
+              <p><b>This update will require you to sign in again.</b></p>
+            </li>
+            <li>
+              <p>Added another tentative fix for logins failing in the initial Sign In prompt.</p>
+            </li>
+            <li>
+              <p>Added option to toggle the usage of Automatic Re-signing</p>
+              <br/>
+              <p>Location: Extender > More</p>
+              <p>Default: Enabled</p>
+            </li>
+            <li>
+              <p>Added option to toggle "No applications need re-signing" notifications</p>
+              <br/>
+              <p>Location: Extender > More</p>
+              <p>Default: Disabled (these notifications are off by default)</p>
+            </li>
+            <li>
+              <p>Added option to allow Automatic Re-signing to run during Low Power Mode</p>
+              <br/>
+              <p>Location: Extender > More > Advanced</p>
+              <p>Default: Disabled</p>
+            </li>
+            <li>
+              <p>Added option to change the time between checking if any applications are close enough to expiry to need re-signing.</p>
+              <br/>
+              <p>Location: Extender > More > Advanced</p>
+              <p>Default: 2 Hours</p>
+            </li>
+            <li>
+              <p>Added option to automatically revoke certificates if a certificate error occurs.</p>
+              <br/>
+              <p>Location: Extender > More > Advanced</p>
+              <p>Default: Disabled</p>
+            </li>
+            <li>
+              <p>Various smaller improvements and bug fixes.</p>
+            </li>
+          </ul>
+        
+          <h2>0.3.1</h2>
+          <ul>
+            <li>
+              <p>Fixed a crashing loop caused by the use of stashing.</p>
+            </li>
+            <li>
+              <p>Added a tentative fix for logging in not working, when symbols such as "+" are in the password.</p>
+            </li>
+            <li>
+              <p>Ensured any failures during installation are not silent.</p>
+            </li>
+          </ul>
+        
+          <h2>0.3</h2>
+          <ul>
+            <li>
+              <p>First public release</p>
+            </li>
+          </ul>
+        
+        </section>
+        </article>
+    </body>
+</html>
