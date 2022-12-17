@@ -1,2 +1,6 @@
 # repo.incendo.ws
-Backup of repo.incendo.ws Cydia repository
+Public archive of Cydia repository located at https://repo.incendo.ws
+
+## Packages
+
+<list here>
